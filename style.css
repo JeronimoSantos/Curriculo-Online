@@ -1,3 +1,42 @@
 html,body,h1,h2,h3,h4,h5,h6 {
     font-family: "Roboto", sans-serif;
 }
+
+.container-dark {
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+    gap: 2rem;
+    background:aquamarine;
+    transition: background .5s;
+}
+
+.container-dark.active {
+    background-color:blueviolet;
+}
+
+.button-dark {
+    width: 5rem;
+    height: 2rem;
+    border: 2px solid #000000;
+    border-radius: 5rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-dark::before {
+    position: absolute;
+    content: '';
+    width: 1.80rem;
+    height: 1.70rem;
+    background-color: #0000ff;
+    border-radius: 50%;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    transition: left .5s;
+}
+
+.button-dark.active::before {
+    left: 43px;
+}
